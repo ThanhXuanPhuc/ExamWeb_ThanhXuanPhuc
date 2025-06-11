@@ -53,7 +53,7 @@ namespace ExamWeb_ThanhXuanPhuc
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Phim}/{action=Index}/{id?}");
             });
         }
     }

@@ -1,0 +1,42 @@
+﻿@model List<Phim>
+@{
+    ViewData["Title"] = "Danh sách Phim";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h3 class="mb-0">DANH SÁCH PHIM</h3>
+    <a asp-action="Add" class="btn btn-primary">
+        <i class="bi bi-patch-plus-fill"></i> Thêm mới
+    </a>
+</div>
+<div>
+    <table class="table table-bordered">
+
+        <tr>
+            <th>Tựa đề</th>
+            <th>Thể loại</th>
+            <th>Giá vé</th>
+            <th>Thời lượng</th>
+            <th>Action</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.TuaDe</td>
+                <td>@(item.TrongNuoc ? "Việt Nam" : "Nước ngoài")</td>
+                <td>@item.GiaVe.ToString("N0") đ</td>
+                <td>@item.ThoiLuong</td>
+                <td>
+                    <a asp-action="Update" asp-route-id="@item.Id">
+                        <i class="bi bi-pencil"></i> Sửa
+                    </a>
+                    <a asp-action="Delete" asp-route-id="@item.Id">
+                        <i class="bi bi-trash-fill"></i> Xoá
+                    </a>
+
+                </td>
+            </tr>
+        }
+    </table>
+</div>
