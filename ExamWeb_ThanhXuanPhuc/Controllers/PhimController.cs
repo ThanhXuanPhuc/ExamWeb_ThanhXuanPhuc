@@ -17,6 +17,7 @@ namespace ExamWeb_ThanhXuanPhuc.Controllers
         public IActionResult Index()
         {
             var phimList = _db.Phims.ToList();
+            ViewBag.GiaVeCaoNhat = phimList.Max(p => p.GiaVe);
             return View(phimList);
         }
         public IActionResult Add()

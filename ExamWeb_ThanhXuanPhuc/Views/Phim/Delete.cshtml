@@ -1,0 +1,8 @@
+﻿@model Phim
+
+<form asp-action="DeleteConfirmed">
+    <input type="hidden" asp-for="Id" />
+    <h2 class="alert alert-danger">Confirm to Delete Student</h2>
+    <button type="submit" class="btn btn-danger">Xác nhận xoá</button>
+    <a asp-action="Index" class="btn btn-secondary">Huỷ</a>
+</form>
