@@ -1,6 +1,8 @@
+using ExamWeb_ThanhXuanPhuc.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,6 +26,7 @@ namespace ExamWeb_ThanhXuanPhuc
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<AppDbContext>(ops => ops.UseSqlServer("name=MSSQL"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
