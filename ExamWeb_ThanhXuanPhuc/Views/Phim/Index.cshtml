@@ -28,18 +28,19 @@
                 <td>@item.GiaVe.ToString("N0") đ</td>
                 <td>@item.ThoiLuong</td>
                 <td>
-                    <a asp-action="Update" asp-route-id="@item.Id">
-                        <i class="bi bi-pencil"></i> Sửa
-                    </a>
-                    <a asp-action="Delete" asp-route-id="@item.Id">
-                        <i class="bi bi-trash-fill"></i> Xoá
-                    </a>
-
+                    <div class="action-box d-flex gap-2">
+                        <a asp-action="Update" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary">
+                            <i class="bi bi-pencil"></i> Sửa
+                        </a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">
+                            <i class="bi bi-trash-fill"></i> Xoá
+                        </a>
+                    </div>
                 </td>
             </tr>
         }
     </table>
 </div>
 <div class="alert alert-info">
-    Thống kê: Có tất cả @Model.Count Phim - Giá vé cao nhất là: <strong>@ViewBag.GiaVeCaoNhat.ToString("N0") đồng</strong>
+    Thống kê: Có tất cả <strong>@Model.Count</strong> Phim - Giá vé cao nhất là: <strong>@ViewBag.GiaVeCaoNhat.ToString("N0") đồng</strong>
 </div>
