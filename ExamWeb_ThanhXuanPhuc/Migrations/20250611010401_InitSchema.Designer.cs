@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ExamWeb_ThanhXuanPhuc.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250611010051_TaoCSDLExamWeb")]
-    partial class TaoCSDLExamWeb
+    [Migration("20250611010401_InitSchema")]
+    partial class InitSchema
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

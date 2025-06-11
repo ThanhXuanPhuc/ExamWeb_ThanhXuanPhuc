@@ -2,7 +2,7 @@
 
 namespace ExamWeb_ThanhXuanPhuc.Migrations
 {
-    public partial class TaoCSDLExamWeb : Migration
+    public partial class InitSchema : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
